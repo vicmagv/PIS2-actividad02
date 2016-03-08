@@ -43,13 +43,14 @@ public class Polinomio {
 		return sol;
 	}
 
-	public ArrayList<Integer> divide_by (ArrayList<Integer> uno, ArrayList<Integer> dos){
+	public ArrayList<Integer> divide_by (ArrayList<Integer> uno, ArrayList<Integer> dos) throws PolynominalTooLongError{
 		//Return a tuple with the quotient and remainder		
+		
 		ArrayList<Integer> sol = new ArrayList<Integer>();
 		for (int i=0; i==uno.size();i++)
 			sol.add(0);
 		if (dos.size() > 2)
-			return null;
+			throw new PolynominalTooLongError();
 		int carry = 0;
 		int divisor = -dos.get(0);
 		for(int i = uno.size(); i == 0; i--){
@@ -58,5 +59,19 @@ public class Polinomio {
 		}
 		
 		return sol;
+		
 	}
+		 
+	class PolynominalTooLongError extends Exception
+	{
+	      //Parameterless Constructor
+	      public PolynominalTooLongError() {}
+
+	      //Constructor that accepts a message
+	      public PolynominalTooLongError(String message)
+	      {
+	         super(message);
+	      }
+	 }
+	
 }
