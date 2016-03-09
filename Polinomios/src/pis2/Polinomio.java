@@ -25,11 +25,18 @@ public class Polinomio {
 			}
 			
 		}
-		else{
+		else if (uno.size() < dos.size()){
 			int aux = (dos.size() - uno.size());
-			for (int i=0; i==aux;i++)
+			for (int i=0; i<aux;i++)
 				uno.add(0);
-			for (int i=0; i<=dos.size();i++){
+			for (int i=0; i<dos.size();i++){
+				sol.add(dos.get(i)+uno.get(i));
+			}
+		}
+		
+		else 
+		{
+			for (int i=0; i<dos.size();i++){
 				sol.add(dos.get(i)+uno.get(i));
 			}
 		}
