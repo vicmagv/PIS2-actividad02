@@ -6,16 +6,24 @@ public class Polinomio {
 
 	ArrayList<Integer> polinomio = new ArrayList<Integer>();
 	
-	public ArrayList<Integer> suma (ArrayList<Integer> uno, ArrayList<Integer> dos){
+	public ArrayList<Integer> suma (ArrayList<Integer> uno, ArrayList<Integer> dos)
+	{
+	
 		ArrayList<Integer> sol = new ArrayList<Integer>();
 		//Return the sum of itself and other polynomial
 		if (uno.size() > dos.size()){
+			
 			int aux = (uno.size() - dos.size());
-			for (int i=0; i==aux;i++)
+			for (int i=0; i<aux;i++)
+				
 				dos.add(0);
-			for (int i=0; i<=uno.size();i++){
+			for (int i=0; i<uno.size();i++)
+			{
 				sol.add(uno.get(i)+dos.get(i));
+				
+				
 			}
+			
 		}
 		else{
 			int aux = (dos.size() - uno.size());
@@ -25,6 +33,8 @@ public class Polinomio {
 				sol.add(dos.get(i)+uno.get(i));
 			}
 		}
+		
+		
 		return sol;
 	}
 	
