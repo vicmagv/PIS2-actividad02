@@ -7,6 +7,8 @@ import java.util.Arrays;
 
 import org.junit.Test;
 
+import pis2.Polinomio.PolynominalTooLongError;
+
 public class PolinomiosTest {
 
 	@Test
@@ -107,26 +109,40 @@ public class PolinomiosTest {
 	}
 	
 	@Test
-	public void testDivision(){
+	public void testDivision() throws PolynominalTooLongError{
 		
 		ArrayList<Integer> uno = new ArrayList<>();
 		ArrayList<Integer> dos = new ArrayList<Integer>();
 		ArrayList<Integer> solucion = new ArrayList<Integer>();
 		ArrayList<Integer> solucion1 = new ArrayList<Integer>();
 		
-		uno.add(1);
-		uno.add(2);
-		uno.add(3);
+		uno.add(4);
+		uno.add(13);
+		uno.add(0);
+		uno.add(8);
+		uno.add(5);
 		
-		dos.add(1);
-		dos.add(2);
 		dos.add(3);
-		
+		dos.add(1);
+		dos.add(3);
 		
 		try{
 			solucion1 = Polinomio.divide_by(uno, dos);
 		}catch(Exception e){
 			assertTrue(true);
 		}
+		
+		dos.remove(dos.size()-1);
+		
+		solucion.add(154);
+		solucion.add(-50);
+		solucion.add(21);
+		solucion.add(-7);
+		solucion.add(5);
+		
+		solucion1 = Polinomio.divide_by(uno, dos);
+		
+		assertEquals(solucion, solucion1);
+		
 	}
 }

@@ -64,17 +64,17 @@ public class Polinomio {
 		//Return a tuple with the quotient and remainder		
 		
 		ArrayList<Integer> sol = new ArrayList<Integer>();
-		for (int i=0; i==uno.size();i++)
+		for (int i=0; i<uno.size();i++)
 			sol.add(0);
 		if (dos.size() > 2)
 			throw new PolynominalTooLongError();
 		int carry = 0;
 		int divisor = -dos.get(0);
-		for(int i = uno.size(); i == 0; i--){
-			sol.set(i, (carry + sol.get(i)));
+		for(int i = uno.size()-1; i>=0 ; i--){
+			sol.set(i, (carry + uno.get(i)));
 			carry = sol.get(i)*divisor;
 		}
-		
+				
 		return sol;
 		
 	}
