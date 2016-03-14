@@ -85,7 +85,7 @@ public class PolinomiosTest {
 	@Test
 	public void testProducto(){
 		
-		ArrayList<Integer> uno = new ArrayList<>();
+		ArrayList<Integer> uno = new ArrayList<Integer>();
 		ArrayList<Integer> dos = new ArrayList<Integer>();
 		ArrayList<Integer> solucion = new ArrayList<Integer>();
 		ArrayList<Integer> solucion1 = new ArrayList<Integer>();
@@ -111,7 +111,7 @@ public class PolinomiosTest {
 	@Test
 	public void testDivision() throws PolynominalTooLongError{
 		
-		ArrayList<Integer> uno = new ArrayList<>();
+		ArrayList<Integer> uno = new ArrayList<Integer>();
 		ArrayList<Integer> dos = new ArrayList<Integer>();
 		ArrayList<Integer> solucion = new ArrayList<Integer>();
 		ArrayList<Integer> solucion1 = new ArrayList<Integer>();
