@@ -6,7 +6,7 @@ public class Polinomio {
 
 	ArrayList<Integer> polinomio = new ArrayList<Integer>();
 	
-	public ArrayList<Integer> suma (ArrayList<Integer> uno, ArrayList<Integer> dos)
+	public static ArrayList<Integer> suma (ArrayList<Integer> uno, ArrayList<Integer> dos)
 	{
 	
 		ArrayList<Integer> sol = new ArrayList<Integer>();
@@ -45,7 +45,7 @@ public class Polinomio {
 		return sol;
 	}
 	
-	public ArrayList<Integer> product(ArrayList<Integer> uno, ArrayList<Integer> dos) {
+	public static ArrayList<Integer> product(ArrayList<Integer> uno, ArrayList<Integer> dos) {
 		// Return the product of itself and other polynomial
 
 		ArrayList<Integer> sol = new ArrayList<Integer>();
@@ -60,7 +60,7 @@ public class Polinomio {
 		return sol;
 	}
 
-	public ArrayList<Integer> divide_by (ArrayList<Integer> uno, ArrayList<Integer> dos) throws PolynominalTooLongError{
+	public static ArrayList<Integer> divide_by (ArrayList<Integer> uno, ArrayList<Integer> dos) throws PolynominalTooLongError{
 		//Return a tuple with the quotient and remainder		
 		
 		ArrayList<Integer> sol = new ArrayList<Integer>();
@@ -79,7 +79,7 @@ public class Polinomio {
 		
 	}
 		 
-	class PolynominalTooLongError extends Exception
+	static class PolynominalTooLongError extends Exception
 	{
 	      //Parameterless Constructor
 	      public PolynominalTooLongError() {}

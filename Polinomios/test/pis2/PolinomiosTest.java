@@ -30,8 +30,7 @@ public class PolinomiosTest {
 		solucion.add(4);
 		solucion.add(6);
 		
-		Polinomio poli= new Polinomio();
-		solucion1=poli.suma(uno, dos);
+		solucion1=Polinomio.suma(uno, dos);
 		assertEquals(solucion,solucion1);
 	}
 	
@@ -54,8 +53,7 @@ public class PolinomiosTest {
 		solucion.add(4);
 		solucion.add(3);
 		
-		Polinomio poli= new Polinomio();
-		solucion1=poli.suma(uno, dos);
+		solucion1=Polinomio.suma(uno, dos);
 		assertEquals(solucion,solucion1);
 	}
 	
@@ -78,13 +76,12 @@ public class PolinomiosTest {
 		solucion.add(4);
 		solucion.add(3);
 		
-		Polinomio poli= new Polinomio();
-		solucion1=poli.suma(uno, dos);
+		solucion1=Polinomio.suma(uno, dos);
 		assertEquals(solucion,solucion1);
 	}
 	
 	@Test
-	public void testProductoIguales(){
+	public void testProducto(){
 		
 		ArrayList<Integer> uno = new ArrayList<>();
 		ArrayList<Integer> dos = new ArrayList<Integer>();
@@ -105,8 +102,31 @@ public class PolinomiosTest {
 		solucion.add(12);
 		solucion.add(9);
 		
-		Polinomio poli = new Polinomio();
-		solucion1 = poli.product(uno, dos);
+		solucion1 = Polinomio.product(uno, dos);
 		assertEquals(solucion, solucion1);
+	}
+	
+	@Test
+	public void testDivision(){
+		
+		ArrayList<Integer> uno = new ArrayList<>();
+		ArrayList<Integer> dos = new ArrayList<Integer>();
+		ArrayList<Integer> solucion = new ArrayList<Integer>();
+		ArrayList<Integer> solucion1 = new ArrayList<Integer>();
+		
+		uno.add(1);
+		uno.add(2);
+		uno.add(3);
+		
+		dos.add(1);
+		dos.add(2);
+		dos.add(3);
+		
+		
+		try{
+			solucion1 = Polinomio.divide_by(uno, dos);
+		}catch(Exception e){
+			assertTrue(true);
+		}
 	}
 }
