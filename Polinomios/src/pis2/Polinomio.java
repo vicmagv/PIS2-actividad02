@@ -78,6 +78,18 @@ public class Polinomio {
 		return sol;
 		
 	}
+	
+	public static ArrayList<Integer> derivate (ArrayList<Integer> uno){
+		//Return an array with the derivated polynome.
+		ArrayList<Integer> sol = new ArrayList<Integer>();
+		for (int i=0; i<uno.size()-1; i++)
+			sol.add(0);
+		
+		for (int i =1, j =0; i<uno.size();i++, j++){
+			sol.set(j, (i*uno.get(i)));
+		}		
+		return sol;
+	}
 		 
 	static class PolynominalTooLongError extends Exception
 	{
