@@ -45,18 +45,18 @@ public class Polinomio {
 		return sol;
 	}
 	
-	public ArrayList<Integer> product (ArrayList<Integer> uno, ArrayList<Integer> dos){
-		//Return the product of itself and other polynomial
+	public ArrayList<Integer> product(ArrayList<Integer> uno, ArrayList<Integer> dos) {
+		// Return the product of itself and other polynomial
 
 		ArrayList<Integer> sol = new ArrayList<Integer>();
-		int aux = ((uno.size()+dos.size())-1);
-		for (int i=0; i==aux; i++)
+		int aux = (uno.size() + dos.size()-2);
+		for (int i = 0; i <= aux; i++)
 			sol.add(0);
-	for (int i=0; i<=uno.size(); i++){
-		for (int j=0;j<=dos.size();j++){
-			sol.set(i+j, uno.get(i)*dos.get(j));
+		for (int i = 0; i < uno.size(); i++) {
+			for (int j = 0; j < dos.size(); j++) {
+				sol.set(i + j, (uno.get(i) * dos.get(j))+sol.get(i+j));
+			}
 		}
-	}
 		return sol;
 	}
 
