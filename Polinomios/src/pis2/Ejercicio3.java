@@ -52,11 +52,11 @@ public class Ejercicio3 {
 		
 		//añadir a lista soluciones
 		for(int i=0; i<polinomio.size(); i++) {
-			parcialIzq = xizq * polinomio.get(i);
+			parcialIzq = Math.pow(xizq * polinomio.get(i), i);
 			izquierda.add(parcialIzq);
 		}
 		for(int i=0; i<polinomio.size(); i++) {
-			parcialDer = xder * polinomio.get(i);
+			parcialDer = Math.pow(xder * polinomio.get(i), i);
 			derecha.add(parcialDer);
 		}
 		
@@ -81,12 +81,12 @@ public class Ejercicio3 {
 		
 		//añadir a lista raiz
 		for(int i=0; i<polinomio.size(); i++) {
-			r = xr * polinomio.get(i);
+			r = Math.pow(xr * polinomio.get(i), i);
 			raiz.add(r);
 		}
 		
 		//sumar de lista raiz
-		for(int i = 1; i < raiz.size(); i++) {
+		for(int i = 0; i < raiz.size(); i++) {
 		    fxr += raiz.get(i);
 		}
 		
@@ -108,20 +108,15 @@ public class Ejercicio3 {
 		 */
 		
 		if((fxizq * fxr) < 0) {
-			System.out.println("xder incorrecto.");
+			System.out.println("valores incorrectos.");
 		}
 		else {
 			if((fxizq * fxr) > 0) {
-				System.out.println("xizq incorrecto.");
+				System.out.println("hay una raiz en xr.");
+				hayraiz = true;
 			}
 			else {
-				if((fxizq * fxr) == 0) {
-					System.out.println("hay una raiz en xr.");
-					hayraiz = true;
-				}
-				else {
-					System.out.println("no existe raiz en xr.");
-				}
+				System.out.println("no existe raiz en xr.");
 			}
 		}
 		return hayraiz;
