@@ -29,30 +29,21 @@ public class Ejercicio2 {
 		double first2 = 3.0;
 		double first3 = 4.0;
 		
-		//inicializar s4
-		int n4=2;
+		//inicializar s4 y s3
+		int n43=2;
 		for(int i=0; i<polinomio.size(); i++) {
-			if(n4 % 2 == 0) {
+			if(n43 % 2 == 0) {
+				//pares
 				s4.add(polinomio.get(i));
-				n4++;
+				n43++;
 			}
 			else {
-				n4++;
+				//impares
+				s3.add(polinomio.get(i));
+				n43++;
 			}
 		}
 		//System.out.println(s4);
-		
-		//inicializar s3
-		int n3=1;
-		for(int i=0; i<polinomio.size(); i++) {
-			if(n3 % 2 == 0) {
-				s3.add(polinomio.get(i));
-				n3++;
-			}
-			else {
-				n3++;
-			}
-		}
 		//System.out.println(s3);
 		
 		//valores s4
